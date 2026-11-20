@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the biographies, landmark moments and legacy of India's Prime Ministers.">
+    <meta name="theme-color" content="#12251f">
+    <title>BharatHistory | India's Prime Ministers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="#home" aria-label="BharatHistory home">
+                <span class="brand-mark" aria-hidden="true">BH</span>
+                <span>Bharat<span class="brand-accent">History</span></span>
+            </a>
+            <ul>
+                <li><a href="#timeline">The timeline</a></li>
+                <li><a href="#history">Leaders</a></li>
+                <li><a href="#quiz">Knowledge check</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <a class="nav-cta" href="#history">Explore leaders <span aria-hidden="true">↗</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-inner">
+                <p class="eyebrow"><span></span> A living story of leadership</p>
+                <h1>India, shaped<br><em>by its leaders.</em></h1>
+                <p class="hero-copy">Discover the people, pivotal moments and ideas behind the office of India's Prime Minister—from independence to the present day.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#history">Meet the prime ministers <span aria-hidden="true">→</span></a>
+                    <a class="text-link" href="#timeline">Explore the timeline <span aria-hidden="true">↓</span></a>
+                </div>
+                <div class="hero-note">
+                    <span class="hero-note-line"></span>
+                    <span>An independent educational guide to India's political history</span>
+                </div>
+            </div>
+            <div class="hero-caption"><span>01</span> THE JOURNEY OF A NATION</div>
+        </section>
+
+        <section class="stats" aria-label="At a glance">
+            <div class="stats-intro"><span class="eyebrow">AT A GLANCE</span><p>A story still unfolding.</p></div>
+            <div class="stat"><strong>1947</strong><span>Year of independence</span></div>
+            <div class="stat"><strong>15</strong><span>Prime ministers to date</span></div>
+            <div class="stat"><strong>79<span class="stat-plus">+</span></strong><span>Years of self-governance</span></div>
+        </section>
+
+        <section class="timeline-section section-wrap" id="timeline">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">A NATION IN MOTION</p>
+                    <h2>Milestones that<br>made modern India.</h2>
+                </div>
+                <p class="section-intro">The role of prime minister has evolved alongside the country's ambitions and challenges. Here are a few defining moments in that journey.</p>
+            </div>
+            <div class="milestone-grid">
+                <article class="milestone-card milestone-feature">
+                    <div class="milestone-image">
+                        <img src="image/prime-ministers/jawaharlal-nehru.jpg" alt="Jawaharlal Nehru, India's first prime minister" loading="lazy">
+                        <span class="image-label">THE FOUNDING YEARS</span>
+                    </div>
+                    <div class="milestone-copy">
+                        <span class="milestone-year">1947</span>
+                        <h3>A new chapter begins</h3>
+                        <p>India becomes independent, and Jawaharlal Nehru takes office as the country's first prime minister.</p>
+                        <a href="#history" class="inline-link">Discover the leaders <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+                <article class="milestone-card">
+                    <div class="milestone-symbol" aria-hidden="true">01 <span>—</span></div>
+                    <div class="milestone-copy">
+                        <span class="milestone-year">1960s–70s</span>
+                        <h3>Building self-reliance</h3>
+                        <p>Leadership through conflict, agricultural change and the steady work of building national institutions.</p>
+                    </div>
+                </article>
+                <article class="milestone-card">
+                    <div class="milestone-symbol" aria-hidden="true">02 <span>—</span></div>
+                    <div class="milestone-copy">
+                        <span class="milestone-year">1991</span>
+                        <h3>An economy opens up</h3>
+                        <p>Economic reforms begin a new era of liberalisation, trade and changing opportunity.</p>
+                    </div>
+                </article>
+                <article class="milestone-card">
+                    <div class="milestone-symbol" aria-hidden="true">03 <span>—</span></div>
+                    <div class="milestone-copy">
+                        <span class="milestone-year">2000s–today</span>
+                        <h3>A changing world</h3>
+                        <p>Technology, infrastructure and India's place in the world become central themes of public life.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="leaders-section" id="history">
+            <div class="section-wrap">
+                <div class="section-heading leaders-heading">
+                    <div>
+                        <p class="eyebrow">THE PEOPLE BEHIND THE OFFICE</p>
+                        <h2>Meet India's<br><em>prime ministers.</em></h2>
+                    </div>
+                    <p class="section-intro">Explore each leader's tenure, political party and contribution to India's story. Search by name or filter by party.</p>
+                </div>
+                <div class="controls">
+                    <label class="search-control">
+                        <span class="visually-hidden">Search prime ministers</span>
+                        <span aria-hidden="true">⌕</span>
+                        <input type="search" id="searchInput" placeholder="Search a leader..." autocomplete="off">
+                    </label>
+                    <label class="filter-control">
+                        <span class="visually-hidden">Filter by political party</span>
+                        <select id="partyFilter">
+                            <option value="all">All political parties</option>
+                            <option value="INC">Indian National Congress</option>
+                            <option value="BJP">Bharatiya Janata Party</option>
+                            <option value="Janata">Janata Party</option>
+                            <option value="Others">Other parties</option>
+                        </select>
+                    </label>
+                    <p class="results-count" id="resultsCount" aria-live="polite"></p>
+                </div>
+                <div class="pm-container" id="pmContainer"></div>
+            </div>
+        </section>
+
+        <section class="quote-band">
+            <div class="quote-mark" aria-hidden="true">“</div>
+            <blockquote>
+                <p>The future depends on what you do today.</p>
+                <footer>— Mahatma Gandhi</footer>
+            </blockquote>
+            <span class="quote-side-note">IDEAS THAT SHAPE A NATION</span>
+        </section>
+
+        <section class="quiz-section section-wrap" id="quiz">
+            <div class="quiz-aside">
+                <p class="eyebrow">TAKE A MOMENT</p>
+                <h2>How well do<br>you know the story?</h2>
+                <p>Put your knowledge of India's prime ministers to the test. Five quick questions, one national story.</p>
+                <span class="quiz-count">05 <span>QUESTIONS</span></span>
+            </div>
+            <div class="quiz-panel">
+                <div class="quiz-topline"><span>HISTORY QUIZ</span><span id="quizProgress">01 / 05</span></div>
+                <h3 id="question"></h3>
+                <div id="options"></div>
+                <div class="quiz-bottom">
+                    <p id="result" aria-live="polite"></p>
+                    <button class="button button-dark" id="nextQuestion" type="button">Next question <span aria-hidden="true">→</span></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="about-inner section-wrap">
+                <div class="about-label">
+                    <p class="eyebrow">ABOUT BHARATHISTORY</p>
+                    <span>AN EDUCATIONAL PROJECT</span>
+                </div>
+                <div class="about-copy">
+                    <h2>History is more than dates.<br>It is the people and choices<br>that move us forward.</h2>
+                    <p>BharatHistory is a student-led introduction to the people who have served as Prime Minister of India. Use it as a starting point for learning, reflection and further research into the country's democratic journey.</p>
+                    <a class="text-link" href="#timeline">Return to the beginning <span aria-hidden="true">↑</span></a>
+                </div>
+                <div class="about-seal" aria-hidden="true"><span>BH</span><small>INDIA<br>1947—</small></div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="pmModal" role="dialog" aria-modal="true" aria-labelledby="modalName" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal" type="button" aria-label="Close biography">&times;</button>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">BH</span><span>Bharat<span class="brand-accent">History</span></span></a>
+        <p>Exploring India's leadership, one chapter at a time.</p>
+        <div class="footer-bottom">
+            <span>Educational project · Made for curious minds</span>
+            <span>Portraits: Wikimedia Commons · Profile sources linked in each biography</span>
+            <span>© 2026 BharatHistory</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
